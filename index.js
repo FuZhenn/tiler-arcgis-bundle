@@ -1,10 +1,6 @@
 var fs = require('fs'),
   util = require('util');
 
-function isNumber(value) {
-  return !isNaN(value - parseFloat(value));
-}
-
 function guessBundleVersion(root) {
   var layersDir = root + '/' + '_alllayers';
   var layerNames = fs.readdirSync(layersDir);
@@ -39,16 +35,8 @@ function guessBundleVersion(root) {
  */
 function tiler(root, options) {
   this.root = root;
-  if (isNumber(options)) {
-    var packSize = options;
-    options = {
-      packSize: packSize,
-      bundleVersion: 1000
-    };
-  } else {
-    options = options || {};
-    options.packSize = options.packSize || 128;
-  }
+  options = options || {};
+  options.packSize = options.packSize || 128;
   if (!options.bundleVersion) {
     options.bundleVersion = guessBundleVersion(root);
   }

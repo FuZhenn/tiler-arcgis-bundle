@@ -1,6 +1,6 @@
 {
   "name": "tiler-arcgis-bundle",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "A nodejs map tile reader for compact tile storage format used by ESRI ArcGIS 10.0-10.2",
   "license": "MIT",
   "repository": {
