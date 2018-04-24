@@ -32,7 +32,7 @@ npm install tiler-arcgis-bundle
 var Tiler = require('tiler-arcgis-bundle');
 //root folder of the tiles, where the Conf.xml stands
 //128 is the packet size (row count and col count) of a tile bundle, default is 128
-var tiler = new Tiler('/home/foo/bundle_tiles/', 128);
+var tiler = new Tiler('/home/foo/bundle_tiles/', { packSize: 128 });
 //tile's x,y,z
 tiler.getTile(3408, 2417, 2, function(error, tile) {
     if (error) {
