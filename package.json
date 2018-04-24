@@ -9,7 +9,7 @@
   },
   "main": "index.js",
   "scripts": {
-    "test" : "node test/test.js"
+    "test" : "node test/test.js && node test/test-new.js"
   },
   "dependencies": {
   },

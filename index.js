@@ -75,14 +75,15 @@ tiler.prototype.getTile = function(x, y, z, callback) {
   var cGroup = parseInt(packSize * parseInt(x / packSize));
   var bundleBase = getBundlePath(this.root, z, rGroup, cGroup);
   var bundleFileName = bundleBase + ".bundle";
-  var index = packSize * (x - cGroup) + (y - rGroup);
   var context = {
-    bundleVersion: this.options.bundleVersion,
     bundleFileName: bundleFileName,
-    index: index
+    bundleVersion: this.options.bundleVersion
   };
   if (this.options.bundleVersion < 1003) {
     context.bundlxFileName = bundleBase + ".bundlx";
+    context.index = packSize * (x - cGroup) + (y - rGroup);
+  } else {
+    context.index = packSize * (y - rGroup) + (x - cGroup);
   }
 
   fs.stat(bundleFileName, function(err, stats) {
