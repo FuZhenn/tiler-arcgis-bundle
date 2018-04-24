@@ -2,16 +2,14 @@
 
 [![Circle CI](https://circleci.com/gh/fuzhenn/tiler-arcgis-bundle.svg?style=svg)](https://circleci.com/gh/fuzhenn/tiler-arcgis-bundle)
 
-A nodejs map tile reader for compact tile storage format used by ESRI ArcGIS 10.0-10.2
+A nodejs map tile reader for compact tile storage format used by ESRI ArcGIS
 
 ## Introduction
-[ArcGIS Compact Tile](https://server.arcgis.com/zh-cn/server/latest/publish-services/windows/inside-the-compact-cache-storage-format.htm) is a tile format since ArcGIS version 10.
+[ArcGIS Compact Tile](https://server.arcgis.com/zh-cn/server/latest/publish-services/windows/inside-the-compact-cache-storage-format.htm) is a tile format since ArcGIS version 10.1
 
 It bundles exploded tile files into a .bundlx and a .bundle file and really reduces number of tile files.
 
 This library is a reader for the bundles.
-
-PLEASE NOTICE: this library is not available for the improved compact format introduced in ArcGIS 10.3, And we are working on the upgrade. 
 
 ## See Also
 [tiler-file](https://github.com/FuZhenn/tiler-file):
