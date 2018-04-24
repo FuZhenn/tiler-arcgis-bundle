@@ -2,7 +2,7 @@ var Tiler = require('../index'),
   fs = require('fs'),
   assert = require('assert');
 
-var tiler = new Tiler(__dirname + '/newbundle');
+var tiler = new Tiler(__dirname + '/newbundle', {storageFormat: 'esriMapCacheStorageModeCompactV2'});
 
 tiler.getTile(0x359, 0x1a2, 10, function(error, tile) {
   if (error) {
